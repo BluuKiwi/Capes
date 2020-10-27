@@ -1,0 +1,7 @@
+name: capes.pw
+author: leuo
+main: xyz.leuo.capes.bukkit.CapesBukkit
+website: https://capes.pw
+
+commands:
+  capes:

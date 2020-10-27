@@ -5,6 +5,7 @@
   <artifactId>independent</artifactId>
   <version>1.0</version>
   <build>
+    <finalName>capes.pw</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -28,8 +29,8 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>7</source>
-          <target>7</target>
+          <source>8</source>
+          <target>8</target>
         </configuration>
       </plugin>
     </plugins>

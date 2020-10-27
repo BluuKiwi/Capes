@@ -1,5 +1,6 @@
 package xyz.leuo.capes.independent;
 
+import dyorgio.runtime.run.as.root.RootExecutor;
 import lombok.Getter;
 import xyz.leuo.capes.independent.gui.listeners.ButtonListener;
 import xyz.leuo.capes.independent.platforms.Platform;
@@ -8,6 +9,7 @@ import xyz.leuo.capes.independent.platforms.windows.WindowsPlatform;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.util.Locale;
 
 public class CapesIndependent extends JFrame {
@@ -18,11 +20,13 @@ public class CapesIndependent extends JFrame {
 
     private @Getter Platform platform;
     private @Getter JPanel jPanel;
+    private @Getter RootExecutor rootExecutor;
 
     private @Getter ButtonListener buttonListener;
 
-    public CapesIndependent() {
+    public CapesIndependent() throws IOException {
         this.runtime = Runtime.getRuntime();
+        this.rootExecutor = new RootExecutor();
 
         String osType = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH);
         if(osType.contains("win")) {
@@ -63,7 +67,7 @@ public class CapesIndependent extends JFrame {
         this.pack();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         instance = new CapesIndependent();
     }
 }

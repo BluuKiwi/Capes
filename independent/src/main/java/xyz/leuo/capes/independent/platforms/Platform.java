@@ -5,7 +5,7 @@ public abstract class Platform {
     protected String name;
     protected Runtime runtime;
 
-    public abstract void addEntry();
+    public abstract boolean addEntry();
 
-    public abstract void removeEntry();
+    public abstract boolean removeEntry();
 }
