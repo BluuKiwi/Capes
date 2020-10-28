@@ -1,2 +1,2 @@
 # Capes
-Better custom capes.
+The open source custom cape system.
